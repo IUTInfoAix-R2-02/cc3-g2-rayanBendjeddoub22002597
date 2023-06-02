@@ -18,6 +18,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,7 +31,6 @@ public class ToileController implements Initializable {
     private static int angleEnDegre = 60;
     private static int angleDepart = 90;
     private static int noteMaximale = 20;
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
