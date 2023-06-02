@@ -51,8 +51,6 @@ public class ToileController implements Initializable {
     private double valeurComp5;
     private double valeurComp6;
 
-    private Line ligne;
-
     @FXML
     private TextField comp1;
     @FXML
@@ -84,7 +82,7 @@ public class ToileController implements Initializable {
             public void handle(KeyEvent keyEvent) {
                 if (!comp1.getText().isEmpty()) {
                     valeurComp1 = Double.parseDouble(comp1.getText());
-                    if(valeurComp1 < 0 || valeurComp1 > 20){
+                    if(valeurComp1 < 0 || valeurComp1 > noteMaximale){
                         labelErreur.setText("Erreur de saisie :\nLes valeurs doivent être entre 0 et 20");
                     } else {
                         pointComp1.setCenterX(getXRadarChart(valeurComp1, 1));
@@ -107,7 +105,7 @@ public class ToileController implements Initializable {
             if(event.getCode() == KeyCode.ENTER){
                 if (!comp2.getText().isEmpty()) {
                     valeurComp2 = Double.parseDouble(comp2.getText());
-                    if(valeurComp2 < 0 || valeurComp2 > 20){
+                    if(valeurComp2 < 0 || valeurComp2 > noteMaximale){
                         labelErreur.setText("Erreur de saisie :\nLes valeurs doivent être entre 0 et 20");
                     } else {
                         pointComp2.setCenterX(getXRadarChart(valeurComp2, 2));
@@ -122,7 +120,7 @@ public class ToileController implements Initializable {
             if(event.getCode() == KeyCode.ENTER){
                 if (!comp3.getText().isEmpty()) {
                     valeurComp3 = Double.parseDouble(comp3.getText());
-                    if(valeurComp3 < 0 || valeurComp3 > 20){
+                    if(valeurComp3 < 0 || valeurComp3 > noteMaximale){
                         labelErreur.setText("Erreur de saisie :\nLes valeurs doivent être entre 0 et 20");
                     } else {
                         pointComp3.setCenterX(getXRadarChart(valeurComp3, 3));
@@ -137,7 +135,7 @@ public class ToileController implements Initializable {
             if(event.getCode() == KeyCode.ENTER){
                 if (!comp4.getText().isEmpty()) {
                     valeurComp4 = Double.parseDouble(comp4.getText());
-                    if(valeurComp4 < 0 || valeurComp4 > 20){
+                    if(valeurComp4 < 0 || valeurComp4 > noteMaximale){
                         labelErreur.setText("Erreur de saisie :\nLes valeurs doivent être entre 0 et 20");
                     } else {
                         pointComp4.setCenterX(getXRadarChart(valeurComp4, 4));
@@ -152,7 +150,7 @@ public class ToileController implements Initializable {
             if(event.getCode() == KeyCode.ENTER){
                 if (!comp5.getText().isEmpty()) {
                     valeurComp5 = Double.parseDouble(comp5.getText());
-                    if(valeurComp5 < 0 || valeurComp5 > 20){
+                    if(valeurComp5 < 0 || valeurComp5 > noteMaximale){
                         labelErreur.setText("Erreur de saisie :\nLes valeurs doivent être entre 0 et 20");
                     } else {
                         pointComp5.setCenterX(getXRadarChart(valeurComp5, 5));
@@ -167,7 +165,7 @@ public class ToileController implements Initializable {
             if(event.getCode() == KeyCode.ENTER){
                 if (!comp6.getText().isEmpty()) {
                     valeurComp6 = Double.parseDouble(comp6.getText());
-                    if(valeurComp6 < 0 || valeurComp6 > 20){
+                    if(valeurComp6 < 0 || valeurComp6 > noteMaximale){
                         labelErreur.setText("Erreur de saisie :\nLes valeurs doivent être entre 0 et 20");
                     } else {
                         pointComp6.setCenterX(getXRadarChart(valeurComp6, 6));
